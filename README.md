@@ -90,6 +90,18 @@ Konsola tekstowa: patrz [docs/CONSOLE.md](docs/CONSOLE.md).
 
 ---
 
+## Windows / macOS
+
+Ten układ istnieje **tylko dla Linuksa** (XKB). Wersji dla Windowsa ani macOS
+nie ma i nie powstanie z mojej ręki — nie używam żadnego z tych systemów, więc
+nie mógłbym jej przetestować ani utrzymywać.
+
+Jeśli potrafisz ją zrobić, pomoc jest bardzo mile widziana:
+**[Windows version wanted — issue #1](https://github.com/callynsky/xkb-fi-pl/issues/1)**.
+W zgłoszeniu są: mapa klawiszy, punkt wyjścia techniczny (Microsoft Keyboard
+Layout Creator dla Windowsa, Ukelele dla macOS), znane ograniczenia i zakres
+pull requesta.
+
 ## English
 
 **A standard Finnish keyboard layout where AltGr produces the Polish letters
@@ -115,6 +127,16 @@ Pick it in your desktop keyboard settings or with
 
 ![Keyboard layout fipl](docs/layout-fipl-en.png)
 
+### Windows / macOS
+
+This layout is **Linux-only** (XKB). There is no Windows or macOS version and
+I will not be writing one: I use neither system, so I could not test or
+maintain it. Help is very welcome —
+**[Windows version wanted — issue #1](https://github.com/callynsky/xkb-fi-pl/issues/1)**
+has the key map, a technical starting point (Microsoft Keyboard Layout Creator
+for Windows, Ukelele for macOS), the known limitations and the scope of a pull
+request.
+
 ## Suomeksi
 
 **Tavallinen suomalainen näppäinasettelu, jossa AltGr tuottaa puolalaiset
@@ -136,6 +158,12 @@ Vain yllä mainitut yhdeksän näppäintä, sekä kaksi huomiota:
 ![Näppäimistöasettelu fipl](docs/nappaimisto-fipl-fi.png)
 
 ---
+
+### Windows / macOS
+
+Tämä asettelu on **vain Linuxille** (XKB). Windows- tai macOS-versiota ei ole,
+enkä tee sitä itse, koska en käytä kumpaakaan järjestelmää. Apu on tervetullutta:
+**[Windows version wanted — issue #1](https://github.com/callynsky/xkb-fi-pl/issues/1)**.
 
 ## Jak powstał obrazek
 
