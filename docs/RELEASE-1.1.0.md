@@ -41,7 +41,7 @@ pakietu `.deb`.
 
 ### Co nowego w 1.1.0
 
-* Plik przebudowany na styl upstreamu: `include "fi(basic)"` plus dziewięć
+* Plik przebudowany na styl upstreamu: `include "fi(classic)"` plus dziewięć
   klawiszy, posortowanych alfabetycznie po nazwie keycode.
 * **Naprawiony klawisz `AD12`** — w 1.0.0 było tam przez pomyłkę drugie `ö`,
   przez co nie dało się napisać `ô`, `ñ` ani `ž`. Wracają martwe znaki
@@ -50,7 +50,7 @@ pakietu `.deb`.
 * 38 klawiszy odzyskuje poziomy AltGr standardowego fińskiego (`µ ß þ ð ø æ`,
   strzałki, martwe znaki), które w 1.0.0 nie dawały nic.
 
-Jedyna świadoma strata względem `fi(basic)`: `AltGr+l` zajmuje miejsce
+Jedyna świadoma strata względem `fi(classic)`: `AltGr+l` zajmuje miejsce
 `dead_stroke`.
 
 ---
@@ -96,7 +96,7 @@ the `.deb`.
 
 ### What is new in 1.1.0
 
-* Rewritten in upstream style: `include "fi(basic)"` plus nine keys, sorted
+* Rewritten in upstream style: `include "fi(classic)"` plus nine keys, sorted
   alphabetically by keycode name.
 * **Fixed `AD12`** — 1.0.0 had a second `ö` there by mistake, which made `ô`,
   `ñ` and `ž` impossible to type. The Finnish dead keys are back.
@@ -104,7 +104,7 @@ the `.deb`.
 * 38 keys regain the standard Finnish AltGr levels (`µ ß þ ð ø æ`, arrows,
   dead keys) that produced nothing in 1.0.0.
 
-The one deliberate trade-off against `fi(basic)`: `AltGr+l` replaces
+The one deliberate trade-off against `fi(classic)`: `AltGr+l` replaces
 `dead_stroke`.
 
 ---
@@ -114,5 +114,5 @@ shows the layout, `xkbcli compile-keymap` yields the nine Polish letters with
 `AD11` = `å` and `AD12` = dead keys, and `ckbcomp fipl fi_pl` puts `U+0105`
 (`ą`) in the console keymap.
 
-Licence: MIT (Expat). The included `fi(basic)` base remains the property of
+Licence: MIT (Expat). The included `fi(classic)` base remains the property of
 the xkeyboard-config authors; see `debian/copyright`.

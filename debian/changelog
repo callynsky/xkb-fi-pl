@@ -1,10 +1,10 @@
 xkb-fi-pl (1.1.0) unstable; urgency=low
 
   * Przebudowa pliku ukladu na styl upstreamu: zamiast definiowac wszystkie
-    klawisze od zera, plik dolacza include "fi(basic)" i nadpisuje wylacznie
+    klawisze od zera, plik dolacza include "fi(classic)" i nadpisuje wylacznie
     dziewiec klawiszy z polskimi literami. Klawisze posortowane alfabetycznie
     po nazwie keycode, zgodnie z wymogiem xkeyboard-config.
-  * Przywrocony klawisz <AD12> z fi(basic) - martwe znaki (dieresis, daszek,
+  * Przywrocony klawisz <AD12> z fi(classic) - martwe znaki (dieresis, daszek,
     tylda, haczek). W wersji 1.0.0 bylo tam przez pomylke drugie "o umlaut",
     takie samo jak na <AC10>, przez co nie dalo sie napisac o z daszkiem ani
     n z tylda.
@@ -16,9 +16,9 @@ xkb-fi-pl (1.1.0) unstable; urgency=low
     w 2.46 fi(basic) i fi(classic) kompiluja sie do identycznych definicji
     klawiszy, a "classic" istnieje w obu wersjach.
   * include "kpdl(dot)" - kropka na klawiaturze numerycznej zostaje kropka.
-    fi(basic) dziedziczy przez fi(classic) wpis kpdl(comma), ktory zamienia
+    fi(classic) dziedziczy wpis kpdl(comma), ktory zamienia
     ja na przecinek.
-  * Skutek uboczny dolaczenia fi(basic): 38 klawiszy odzyskuje poziomy AltGr,
+  * Skutek uboczny dolaczenia fi(classic): 38 klawiszy odzyskuje poziomy AltGr,
     ktore w 1.0.0 nie dawaly nic (mu, ssharp, thorn, eth, oslash, ae, strzalki,
     martwe znaki i pozostale znaki standardowego finskiego ukladu).
   * debian/copyright w formacie DEP-5 z osobna nota licencyjna dla bazy

@@ -3,7 +3,7 @@ Upstream-Name: xkb-fi-pl
 Source: https://github.com/callynsky/xkb-fi-pl
 Comment:
  Plik symbols/fipl sklada sie z dwoch czesci. Baza jest dolaczana dyrektywa
- include "fi(basic)" z pakietu xkb-data (xkeyboard-config) i pozostaje
+ include "fi(classic)" z pakietu xkb-data (xkeyboard-config) i pozostaje
  wlasnoscia jego autorow - stanza "Files: symbols/fipl" ponizej opisuje
  WYLACZNIE zmiany naniesione na ta baze. Z tego powodu obie noty licencyjne
  sa wymienione osobno.
@@ -17,8 +17,8 @@ Files: symbols/fipl
 Copyright: 2026 Piotr <197482635+callynsky@users.noreply.github.com>
 License: Expat
 Comment:
- Zmiany wzgledem fi(basic): dziewiec polskich liter na trzecim poziomie oraz
- przywrocenie kropki na klawiaturze numerycznej. Dolaczana baza fi(basic)
+ Zmiany wzgledem fi(classic): dziewiec polskich liter na trzecim poziomie oraz
+ przywrocenie kropki na klawiaturze numerycznej. Dolaczana baza fi(classic)
  nie jest czescia tego pliku - patrz nota licencyjna nizej.
 
 Files: debian/*
@@ -45,7 +45,7 @@ License: Expat
  IN THE SOFTWARE.
 
 License: xkeyboard-config
- Baza ukladu (fi(basic)) pochodzi z projektu xkeyboard-config i jest
+ Baza ukladu (fi(classic)) pochodzi z projektu xkeyboard-config i jest
  dostarczana przez pakiet xkb-data, nie przez ten pakiet. Jej warunki:
  .
  Copyright 1996 by Joseph Moss

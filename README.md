@@ -23,20 +23,20 @@ Nazwa układu: **`fipl`**, wariant **`fi_pl`**.
 
 ## Czym różni się od standardowego fińskiego
 
-Plik składa się z `include "fi(basic)"` i **dziewięciu klawiszy** z tabeli
+Plik składa się z `include "fi(classic)"` i **dziewięciu klawiszy** z tabeli
 powyżej. To cała różnica — nic więcej nie jest zmieniane. Dwie rzeczy warte
 odnotowania:
 
-* **`AltGr+l` zajmuje miejsce `dead_stroke`** z `fi(basic)`. To jedyny znak
+* **`AltGr+l` zajmuje miejsce `dead_stroke`** z `fi(classic)`. To jedyny znak
   fińskiego układu, który trzeba było poświęcić, żeby `ł` trafiło tam, gdzie
   jest na polskiej klawiaturze.
-* **Kropka na klawiaturze numerycznej zostaje kropką.** `fi(basic)` dziedziczy
+* **Kropka na klawiaturze numerycznej zostaje kropką.** `fi(classic)` dziedziczy
   przez `fi(classic)` wpis `kpdl(comma)`, który zamienia ją na przecinek —
   zgodnie z fińską konwencją zapisu liczb. Ten układ przywraca kropkę
   dyrektywą `include "kpdl(dot)"`, bo zmiana zachowania klawiatury numerycznej
   bywa kłopotliwa przy wpisywaniu haseł.
 
-Wszystko pozostałe pochodzi wprost z `fi(basic)`: `€` na `AltGr+5`, `@` na
+Wszystko pozostałe pochodzi wprost z `fi(classic)`: `€` na `AltGr+5`, `@` na
 `AltGr+2`, `µ ß þ ð ø æ § ¶ ±`, martwe znaki na `AD12` (`¨ ^ ~ ˇ`) i reszta.
 
 ---
@@ -95,16 +95,16 @@ Konsola tekstowa: patrz [docs/CONSOLE.md](docs/CONSOLE.md).
 **A standard Finnish keyboard layout where AltGr produces the Polish letters
 in the same positions as on the Polish (`pl`) layout.** The Finnish base is
 untouched — `å`, `ö`, `ä` and the dead keys all stay where they are. The file
-is `include "fi(basic)"` plus nine keys: **ą ć ę ł ń ó ś ź ż**, with the
+is `include "fi(classic)"` plus nine keys: **ą ć ę ł ń ó ś ź ż**, with the
 capitals on AltGr+Shift. Layout name **`fipl`**, variant **`fi_pl`**.
 
 ### Differences from standard Finnish
 
 Only the nine keys above, plus two notes:
 
-* **`AltGr+l` replaces `dead_stroke`** from `fi(basic)` — the one Finnish
+* **`AltGr+l` replaces `dead_stroke`** from `fi(classic)` — the one Finnish
   character given up so that `ł` sits where Polish typists expect it.
-* **The keypad decimal key stays a dot.** `fi(basic)` inherits `kpdl(comma)`
+* **The keypad decimal key stays a dot.** `fi(classic)` inherits `kpdl(comma)`
   through `fi(classic)`, which turns it into a comma; this layout restores the
   dot with `include "kpdl(dot)"`.
 
@@ -120,7 +120,7 @@ Pick it in your desktop keyboard settings or with
 **Tavallinen suomalainen näppäinasettelu, jossa AltGr tuottaa puolalaiset
 kirjaimet samoista näppäimistä kuin puolalaisessa (`pl`) asettelussa.**
 Suomalainen perusta on ennallaan — `å`, `ö`, `ä` ja tarkenäppäimet pysyvät
-paikoillaan. Tiedosto on `include "fi(basic)"` ja yhdeksän näppäintä:
+paikoillaan. Tiedosto on `include "fi(classic)"` ja yhdeksän näppäintä:
 **ą ć ę ł ń ó ś ź ż**, isot kirjaimet AltGr+Shift. Asettelun nimi **`fipl`**,
 muunnos **`fi_pl`**.
 
@@ -128,8 +128,8 @@ muunnos **`fi_pl`**.
 
 Vain yllä mainitut yhdeksän näppäintä, sekä kaksi huomiota:
 
-* **`AltGr+l` korvaa `fi(basic)`-asettelun `dead_stroke`-merkin.**
-* **Numeronäppäimistön desimaalierotin pysyy pisteenä.** `fi(basic)` perii
+* **`AltGr+l` korvaa `fi(classic)`-asettelun `dead_stroke`-merkin.**
+* **Numeronäppäimistön desimaalierotin pysyy pisteenä.** `fi(classic)` perii
   `fi(classic)`-asettelusta `kpdl(comma)`-määrittelyn, joka tekee siitä pilkun;
   tämä asettelu palauttaa pisteen `include "kpdl(dot)"` -rivillä.
 
@@ -162,6 +162,6 @@ Co trzeba zrobić, żeby ten trafił do projektu: [docs/UPSTREAM.md](docs/UPSTRE
 ## Licencja
 
 MIT (Expat) — ta sama rodzina co `xkeyboard-config`, żeby nie zamykać drogi
-do upstreamu. Dołączana baza `fi(basic)` pozostaje własnością autorów
+do upstreamu. Dołączana baza `fi(classic)` pozostaje własnością autorów
 `xkeyboard-config`; szczegóły w [debian/copyright](debian/copyright)
 i [LICENSE](LICENSE).

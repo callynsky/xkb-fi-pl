@@ -29,7 +29,7 @@ Upstream **nie przyjmie samodzielnego układu `fipl`**. Wymagania:
 4. **Przebudowa samego pliku**, bo obecny go nie spełnia:
    * klawisze posortowane alfabetycznie po nazwie keycode (teraz są
      w kolejności rzędów klawiatury);
-   * zamiast definiowania wszystkich klawiszy od zera — `include "fi(basic)"`
+   * zamiast definiowania wszystkich klawiszy od zera — `include "fi(fi)"`
      i tylko klawisze różniące się;
    * `include "level3(ralt_switch)"` dla trzeciego poziomu — to już jest;
    * tylko jedna grupa (Group1) — to już jest.

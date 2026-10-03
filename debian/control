@@ -12,7 +12,7 @@ Architecture: all
 Depends: ${misc:Depends}, xkb-data (>= 2.42), xkb-data (<< 3~)
 Recommends: console-setup
 Description: Finnish keyboard layout with Polish characters on AltGr
- An XKB layout named "fipl": the standard Finnish layout, fi(basic), with
+ An XKB layout named "fipl": the standard Finnish layout, fi(classic), with
  the nine Polish letters added on the third level, reached with AltGr, in the
  same positions as on the Polish (pl) layout:
  .

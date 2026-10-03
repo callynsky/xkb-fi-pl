@@ -41,7 +41,7 @@ NAMED = {
     "slash": "/", "sterling": "£", "underscore": "_", "EuroSign": "€",
     # martwe klawisze oznaczamy kropka, zeby bylo widac, ze nie daja znaku od razu
     "dead_acute": "ˊ", "dead_grave": "ˋ",
-    # Znaki wnoszone przez fi(basic) na trzecim i czwartym poziomie.
+    # Znaki wnoszone przez fi(classic) na trzecim i czwartym poziomie.
     "ae": "æ", "AE": "Æ", "oe": "œ", "OE": "Œ",
     "oslash": "ø", "Oslash": "Ø", "eth": "ð", "ETH": "Ð",
     "thorn": "þ", "THORN": "Þ", "eng": "ŋ", "ENG": "Ŋ",
