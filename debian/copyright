@@ -1,0 +1,65 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: xkb-fi-pl
+Source: https://github.com/callynsky/xkb-fi-pl
+Comment:
+ Plik symbols/fipl sklada sie z dwoch czesci. Baza jest dolaczana dyrektywa
+ include "fi(basic)" z pakietu xkb-data (xkeyboard-config) i pozostaje
+ wlasnoscia jego autorow - stanza "Files: symbols/fipl" ponizej opisuje
+ WYLACZNIE zmiany naniesione na ta baze. Z tego powodu obie noty licencyjne
+ sa wymienione osobno.
+
+Files: *
+Copyright: 2026 Piotr <197482635+callynsky@users.noreply.github.com>
+License: Expat
+
+Files: symbols/fipl
+ rules/evdev.xml
+Copyright: 2026 Piotr <197482635+callynsky@users.noreply.github.com>
+License: Expat
+Comment:
+ Zmiany wzgledem fi(basic): dziewiec polskich liter na trzecim poziomie oraz
+ przywrocenie kropki na klawiaturze numerycznej. Dolaczana baza fi(basic)
+ nie jest czescia tego pliku - patrz nota licencyjna nizej.
+
+Files: debian/*
+Copyright: 2026 Piotr <197482635+callynsky@users.noreply.github.com>
+License: Expat
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+License: xkeyboard-config
+ Baza ukladu (fi(basic)) pochodzi z projektu xkeyboard-config i jest
+ dostarczana przez pakiet xkb-data, nie przez ten pakiet. Jej warunki:
+ .
+ Copyright 1996 by Joseph Moss
+ Copyright (C) 2002-2007 Free Software Foundation, Inc.
+ Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004 Anton Zinoviev
+ .
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that copyright
+ notice and this permission notice appear in supporting documentation, and
+ that the name of the copyright holder(s) not be used in advertising or
+ publicity pertaining to distribution of the software without specific,
+ written prior permission.  The copyright holder(s) makes no representations
+ about the suitability of this software for any purpose.  It is provided "as
+ is" without express or implied warranty.
+ .
+ Pelny tekst: /usr/share/doc/xkb-data/copyright

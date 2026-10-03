@@ -1,0 +1,27 @@
+# PRZYKLAD, nie wlaczany przez pakiet.
+#
+# Potrzebny TYLKO wtedy, gdy chcesz ukladu fipl na konsolach tekstowych,
+# a NIE chcesz zmieniac /etc/default/keyboard. Jesli ustawisz tam
+# XKBLAYOUT="fipl" i XKBVARIANT="fi_pl", console-setup zrobi to samo
+# i ta jednostka jest zbedna.
+#
+# Przygotowanie mapy (raz):
+#   ckbcomp fipl fi_pl | gzip -9 | sudo tee /etc/console-keymap-fipl.kmap.gz >/dev/null
+# Wlaczenie:
+#   sudo cp console-keymap-fipl.service /etc/systemd/system/
+#   sudo systemctl enable --now console-keymap-fipl.service
+
+[Unit]
+Description=Uklad fipl (fi_pl) na konsolach tekstowych
+Documentation=man:loadkeys(1)
+# Kolejnosc jest konieczna: console-setup wczytuje wlasna mape i nadpisalby nasza.
+After=console-setup.service keyboard-setup.service
+ConditionPathExists=/etc/console-keymap-fipl.kmap.gz
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/loadkeys /etc/console-keymap-fipl.kmap.gz
+
+[Install]
+WantedBy=multi-user.target

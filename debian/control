@@ -1,0 +1,33 @@
+Source: xkb-fi-pl
+Section: x11
+Priority: optional
+Maintainer: Piotr <197482635+callynsky@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/callynsky/xkb-fi-pl
+
+Package: xkb-fi-pl
+Architecture: all
+Depends: ${misc:Depends}, xkb-data (>= 2.42), xkb-data (<< 3~)
+Recommends: console-setup
+Description: Finnish keyboard layout with Polish characters on AltGr
+ An XKB layout named "fipl": the standard Finnish layout, fi(basic), with
+ the nine Polish letters added on the third level, reached with AltGr, in the
+ same positions as on the Polish (pl) layout:
+ .
+ a-ogonek, c-acute, e-ogonek, l-stroke, n-acute, o-acute, s-acute,
+ z-acute and z-dot-above, with their capitals on AltGr+Shift.
+ .
+ Nothing else is changed: the Finnish base keeps a-ring, o-diaeresis,
+ a-diaeresis and its dead keys. AltGr+l replaces the Finnish dead_stroke,
+ and the keypad decimal key is kept as a dot rather than the Finnish comma.
+ .
+ Installing this package only makes the layout available. It does not
+ select it: no user setting and no file under /etc/default is touched.
+ Choose it in your desktop keyboard settings, or with localectl.
+# Opisu po polsku NIE da sie tu umiescic: dpkg odrzuca pole Description-pl
+# w sekcji pakietu binarnego ("unknown information field") i nie przenosi go
+# do gotowego .deb. Debian tlumaczy opisy osobnym kanalem (DDTP, pliki
+# Translation-* w archiwum), a nie przez debian/control. Polski opis jest
+# w README.md, ktory pakiet instaluje do /usr/share/doc/xkb-fi-pl/.

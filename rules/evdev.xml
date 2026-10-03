@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>fipl</name>
+        <shortDescription>fipl</shortDescription>
+        <description>Finnish + Polish AltGr (Piotr)</description>
+        <languageList>
+          <iso639Id>fi</iso639Id>
+          <iso639Id>pl</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>fi_pl</name>
+            <description>Finnish + Polish AltGr</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>

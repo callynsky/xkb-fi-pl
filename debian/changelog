@@ -1,0 +1,41 @@
+xkb-fi-pl (1.1.0) unstable; urgency=low
+
+  * Przebudowa pliku ukladu na styl upstreamu: zamiast definiowac wszystkie
+    klawisze od zera, plik dolacza include "fi(basic)" i nadpisuje wylacznie
+    dziewiec klawiszy z polskimi literami. Klawisze posortowane alfabetycznie
+    po nazwie keycode, zgodnie z wymogiem xkeyboard-config.
+  * Przywrocony klawisz <AD12> z fi(basic) - martwe znaki (dieresis, daszek,
+    tylda, haczek). W wersji 1.0.0 bylo tam przez pomylke drugie "o umlaut",
+    takie samo jak na <AC10>, przez co nie dalo sie napisac o z daszkiem ani
+    n z tylda.
+  * Baza dolaczana przez include to fi(classic), nie fi(basic). W
+    xkeyboard-config 2.48 wariant "basic" zniknal z symbols/fi - zostal
+    przemianowany na ukryty fi(fi), a publiczna nazwa to "classic". Przy
+    fi(basic) uklad przestalby sie kompilowac po aktualizacji xkb-data do
+    2.48, a zaleznosc xkb-data (<< 3~) by tego nie wylapala. Sprawdzone:
+    w 2.46 fi(basic) i fi(classic) kompiluja sie do identycznych definicji
+    klawiszy, a "classic" istnieje w obu wersjach.
+  * include "kpdl(dot)" - kropka na klawiaturze numerycznej zostaje kropka.
+    fi(basic) dziedziczy przez fi(classic) wpis kpdl(comma), ktory zamienia
+    ja na przecinek.
+  * Skutek uboczny dolaczenia fi(basic): 38 klawiszy odzyskuje poziomy AltGr,
+    ktore w 1.0.0 nie dawaly nic (mu, ssharp, thorn, eth, oslash, ae, strzalki,
+    martwe znaki i pozostale znaki standardowego finskiego ukladu).
+  * debian/copyright w formacie DEP-5 z osobna nota licencyjna dla bazy
+    pochodzacej z xkeyboard-config.
+  * README: sekcja o roznicach wzgledem standardowego finskiego, PL/EN/FI.
+  * Adres opiekuna zastapiony placeholderem do czasu publikacji.
+
+ -- Piotr <197482635+callynsky@users.noreply.github.com>  Fri, 02 Oct 2026 23:35:33 +0300
+
+xkb-fi-pl (1.0.0) unstable; urgency=low
+
+  * Pierwsze wydanie: uklad fipl (wariant fi_pl) - finska podstawa
+    z polskimi znakami na trzecim poziomie (AltGr).
+  * Wpis rejestru w /etc/xkb/rules/evdev.xml, zeby uklad byl widoczny
+    na liscie ukladow w srodowiskach graficznych uzywajacych
+    libxkbregistry (Plasma, GNOME).
+  * Przyklad jednostki systemd dla konsoli tekstowej w katalogu
+    examples - celowo NIE wlaczany przez pakiet.
+
+ -- Piotr <197482635+callynsky@users.noreply.github.com>  Fri, 02 Oct 2026 23:30:00 +0300

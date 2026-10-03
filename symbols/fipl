@@ -1,0 +1,54 @@
+// Finnish keyboard layout with Polish letters on the third level (AltGr).
+// Finski uklad klawiatury z polskimi literami na trzecim poziomie (AltGr).
+//
+// Zmiany / changes by: Piotr <197482635+callynsky@users.noreply.github.com>
+// SPDX-License-Identifier: MIT
+//
+// Baza pochodzi z xkeyboard-config - fi(basic), czyli standardowy finski
+// uklad - i pozostaje wlasnoscia jego autorow na licencji MIT/Expat.
+// Ten plik dodaje do niej WYLACZNIE dziewiec polskich liter pod AltGr,
+// w tych samych miejscach, co na polskiej klawiaturze pl:
+//     a -> a-ogonek   c -> c-acute    e -> e-ogonek
+//     l -> l-stroke   n -> n-acute    o -> o-acute
+//     s -> s-acute    x -> z-acute    z -> z-dot-above
+// Z Shiftem wielkie litery. Nic poza tym nie jest zmieniane.
+//
+// The base is xkeyboard-config's fi(basic), MIT/Expat licensed. This file
+// only adds the nine Polish letters on AltGr, in the same positions as on
+// the Polish (pl) layout; AltGr+Shift gives the capitals.
+//
+// Uwaga: AltGr+l zajmuje miejsce martwego znaku dead_stroke z fi(basic).
+// Note: AltGr+l replaces fi(basic)'s dead_stroke.
+//
+// Klawisze posortowane alfabetycznie po nazwie keycode (wymog upstreamu).
+// Keys sorted alphabetically by keycode name (upstream requirement).
+
+default partial alphanumeric_keys
+xkb_symbols "fi_pl" {
+
+    // fi(classic), NIE fi(basic): w xkeyboard-config 2.48 wariant "basic"
+    // zniknal (zostal przemianowany na ukryty fi(fi)), a "classic" istnieje
+    // w obu wersjach i w 2.46 kompiluje sie do identycznych definicji klawiszy.
+    // fi(classic), NOT fi(basic): xkeyboard-config 2.48 dropped "basic"
+    // (renamed to the hidden fi(fi)); "classic" exists in both and compiles
+    // to identical key definitions in 2.46.
+    include "fi(classic)"
+
+    // Kropka na klawiaturze numerycznej zamiast przecinka, ktory fi(basic)
+    // dziedziczy przez kpdl(comma). / Keypad decimal point instead of comma.
+    include "kpdl(dot)"
+
+    name[Group1] = "Finnish (Polish AltGr)";
+
+    key <AB01> { [         z,         Z,     zabovedot,     Zabovedot ] };
+    key <AB02> { [         x,         X,        zacute,        Zacute ] };
+    key <AB03> { [         c,         C,        cacute,        Cacute ] };
+    key <AB06> { [         n,         N,        nacute,        Nacute ] };
+    key <AC01> { [         a,         A,       aogonek,       Aogonek ] };
+    key <AC02> { [         s,         S,        sacute,        Sacute ] };
+    key <AC09> { [         l,         L,       lstroke,       Lstroke ] };
+    key <AD03> { [         e,         E,       eogonek,       Eogonek ] };
+    key <AD09> { [         o,         O,        oacute,        Oacute ] };
+
+    include "level3(ralt_switch)"
+};

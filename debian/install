@@ -1,0 +1,2 @@
+symbols/fipl                      usr/share/xkeyboard-config-2/symbols
+rules/evdev.xml                   etc/xkb/rules

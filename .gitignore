@@ -1,0 +1,16 @@
+# srodowisko Pythona do generowania obrazka
+.venv/
+
+# wyniki budowy pakietu
+debian/.debhelper/
+debian/xkb-fi-pl/
+debian/files
+debian/debhelper-build-stamp
+debian/*.substvars
+debian/*.debhelper.log
+
+# Pakiet .deb NIE trafia do repozytorium - dolaczamy go jako zalacznik
+# wydania na GitHubie (Releases -> Assets).
+*.deb
+*.buildinfo
+*.changes
