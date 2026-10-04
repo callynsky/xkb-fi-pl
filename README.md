@@ -1,6 +1,6 @@
 # xkb-fi-pl — Finnish layout with Polish AltGr
 
-![Układ klawiatury fipl](docs/uklad-fipl.png)
+[![Układ klawiatury fipl](docs/uklad-fipl.png)](docs/uklad-fipl.png)
 
 Ten układ pozwala pisać polskie znaki (ą ę ł ż…) na fińskiej klawiaturze
 w Linuksie — to zwykły układ XKB, więc działa jednakowo w Ubuntu, Linux Mint,
@@ -34,7 +34,7 @@ odnotowania:
 * **`AltGr+l` zajmuje miejsce `dead_stroke`** z `fi(classic)`. To jedyny znak
   fińskiego układu, który trzeba było poświęcić, żeby `ł` trafiło tam, gdzie
   jest na polskiej klawiaturze.
-* **Kropka na klawiaturze numerycznej zostaje kropką.** `fi(classic)` to samo
+* **Kropka na klawiaturze numerycznej zostaje kropką.** `fi(classic)` to tylko
   `include "fi(fi)"`, a `fi(fi)` dołącza `kpdl(comma)`, który zamienia ją na
   przecinek — zgodnie z fińską konwencją zapisu liczb. Ten układ przywraca
   kropkę dyrektywą `include "kpdl(dot)"`, bo zmiana zachowania klawiatury
@@ -132,7 +132,7 @@ makes the layout available; it never selects it and never edits your settings.
 Pick it in your desktop keyboard settings or with
 `localectl set-x11-keymap fipl pc105 fi_pl`.
 
-![Keyboard layout fipl](docs/layout-fipl-en.png)
+[![Keyboard layout fipl](docs/layout-fipl-en.png)](docs/layout-fipl-en.png)
 
 ### Windows / macOS
 
@@ -153,21 +153,26 @@ samoin Ubuntussa, Linux Mintissä, KDE:ssä ja GNOMEssa.
 **Tavallinen suomalainen näppäinasettelu, jossa AltGr tuottaa puolalaiset
 kirjaimet samoista näppäimistä kuin puolalaisessa (`pl`) asettelussa.**
 Suomalainen perusta on ennallaan — `å`, `ö`, `ä` ja tarkenäppäimet pysyvät
-paikoillaan. Tiedosto on `include "fi(classic)"` ja yhdeksän näppäintä:
-**ą ć ę ł ń ó ś ź ż**, isot kirjaimet AltGr+Shift. Asettelun nimi **`fipl`**,
-muunnos **`fi_pl`**.
+paikoillaan. Tiedosto on `include "fi(classic)"` ja yhdeksän puolalaista
+kirjainta: **ą ć ę ł ń ó ś ź ż**, isot kirjaimet AltGr+Shift-yhdistelmällä.
+Asettelun nimi **`fipl`**, muunnos **`fi_pl`**.
 
 ### Erot tavalliseen suomalaiseen
 
 Vain yllä mainitut yhdeksän näppäintä, sekä kaksi huomiota:
 
-* **`AltGr+l` korvaa `fi(classic)`-asettelun `dead_stroke`-merkin.**
+* **`AltGr+l` korvaa `fi(classic)`-asettelun `dead_stroke`-merkin** — se on
+  ainoa suomalainen merkki, josta luovuttiin, jotta `ł` on samassa paikassa
+  kuin puolalaisessa näppäimistössä.
 * **Numeronäppäimistön desimaalierotin pysyy pisteenä.** `fi(classic)` on
   pelkkä `include "fi(fi)"`, ja `fi(fi)` tuo mukanaan `kpdl(comma)`-määrittelyn,
   joka tekee pisteestä pilkun; tämä asettelu palauttaa pisteen
   `include "kpdl(dot)"` -rivillä.
 
-![Näppäimistöasettelu fipl](docs/nappaimisto-fipl-fi.png)
+Valitse asettelu työpöydän näppäimistöasetuksista tai komennolla
+`localectl set-x11-keymap fipl pc105 fi_pl`.
+
+[![Näppäimistöasettelu fipl](docs/nappaimisto-fipl-fi.png)](docs/nappaimisto-fipl-fi.png)
 
 ---
 

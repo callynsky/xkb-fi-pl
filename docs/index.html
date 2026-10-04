@@ -73,8 +73,8 @@ footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--kres
   <a href="#suomeksi" lang="fi">Suomeksi</a>
 </nav>
 
-<img class="uklad" src="uklad-fipl.png"
-     alt="Układ klawiatury fipl: fiński układ z polskimi znakami ą ć ę ł ń ó ś ź ż na trzecim poziomie pod klawiszem AltGr">
+<a href="uklad-fipl.png"><img class="uklad" src="uklad-fipl.png"
+     alt="Układ klawiatury fipl: fiński układ z polskimi znakami ą ć ę ł ń ó ś ź ż na trzecim poziomie pod klawiszem AltGr"></a>
 
 <section id="polski" lang="pl">
 <h2>Polski</h2>
@@ -132,7 +132,7 @@ sudo localectl set-x11-keymap fipl pc105 fi_pl   # konsola i ekran logowania</co
 z <code>fi(classic)</code>. To jedyny znak fińskiego układu, który trzeba było
 poświęcić, żeby <code>ł</code> trafiło tam, gdzie jest na polskiej klawiaturze.</li>
 <li><strong>Kropka na klawiaturze numerycznej zostaje kropką.</strong>
-<code>fi(classic)</code> to samo <code>include "fi(fi)"</code>, a
+<code>fi(classic)</code> to tylko <code>include "fi(fi)"</code>, a
 <code>fi(fi)</code> dołącza <code>kpdl(comma)</code>, który zamienia ją na
 przecinek. Ten układ przywraca kropkę przez <code>include "kpdl(dot)"</code>.</li>
 </ul>
@@ -170,6 +170,10 @@ is just <code>include "fi(fi)"</code>, and <code>fi(fi)</code> pulls in
 it with <code>include "kpdl(dot)"</code>.</li>
 </ul>
 
+<h3>Choosing the layout</h3>
+<pre><code># desktop: System Settings → Keyboard → Layouts → Add → “fipl”
+sudo localectl set-x11-keymap fipl pc105 fi_pl   # console and login screen</code></pre>
+
 <p><a href="layout-fipl-en.png">Layout picture with English labels</a></p>
 </section>
 
@@ -184,26 +188,32 @@ samoin Ubuntussa, Linux Mintissä, KDE:ssä ja GNOMEssa.</p>
 puolalaiset kirjaimet samoista näppäimistä kuin puolalaisessa
 (<code>pl</code>) asettelussa.</strong> Suomalainen perusta on ennallaan —
 <code>å</code>, <code>ö</code>, <code>ä</code> ja tarkenäppäimet pysyvät
-paikoillaan. Mukaan tulee yhdeksän näppäintä: <strong>ą ć ę ł ń ó ś ź ż</strong>,
-isot kirjaimet AltGr+Shift. Asettelun nimi <code>fipl</code>, muunnos
-<code>fi_pl</code>.</p>
+paikoillaan. Mukaan tulee yhdeksän puolalaista kirjainta:
+<strong>ą ć ę ł ń ó ś ź ż</strong>, isot kirjaimet AltGr+Shift-yhdistelmällä.
+Asettelun nimi <code>fipl</code>, muunnos <code>fi_pl</code>.</p>
 
 <pre><code>wget https://github.com/callynsky/xkb-fi-pl/releases/download/v1.1.0/xkb-fi-pl_1.1.0_all.deb
 sudo apt install ./xkb-fi-pl_1.1.0_all.deb</code></pre>
 
-<p>Tai kloonista: <code>./install.sh --user</code> tai <code>--system</code>.
-Paketti ainoastaan tuo asettelun saataville; se ei valitse sitä eikä muuta
-asetuksiasi.</p>
+<p>Tai kloonatusta repositoriosta: <code>./install.sh --user</code> tai
+<code>--system</code>. Paketti ainoastaan tuo asettelun saataville; se ei
+valitse sitä eikä muuta asetuksiasi.</p>
 
 <ul>
 <li><strong><code>AltGr+l</code> korvaa <code>fi(classic)</code>-asettelun
-<code>dead_stroke</code>-merkin.</strong></li>
+<code>dead_stroke</code>-merkin</strong> — se on ainoa suomalainen merkki, josta
+luovuttiin, jotta <code>ł</code> on samassa paikassa kuin puolalaisessa
+näppäimistössä.</li>
 <li><strong>Numeronäppäimistön desimaalierotin pysyy pisteenä.</strong>
 <code>fi(classic)</code> on pelkkä <code>include "fi(fi)"</code>, ja
 <code>fi(fi)</code> tuo mukanaan <code>kpdl(comma)</code>-määrittelyn, joka
 tekee pisteestä pilkun; tämä asettelu palauttaa pisteen
 <code>include "kpdl(dot)"</code> -rivillä.</li>
 </ul>
+
+<h3>Asettelun valinta</h3>
+<pre><code># työpöytä: Järjestelmän asetukset → Näppäimistö → Asettelut → Lisää → ”fipl”
+sudo localectl set-x11-keymap fipl pc105 fi_pl   # konsoli ja kirjautumisruutu</code></pre>
 
 <p><a href="nappaimisto-fipl-fi.png">Näppäimistökuva suomeksi</a></p>
 </section>
