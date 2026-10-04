@@ -34,8 +34,10 @@ xkb_symbols "fi_pl" {
     // to identical key definitions in 2.46.
     include "fi(classic)"
 
-    // Kropka na klawiaturze numerycznej zamiast przecinka, ktory fi(classic)
-    // dziedziczy przez kpdl(comma). / Keypad decimal point instead of comma.
+    // Kropka na klawiaturze numerycznej zamiast przecinka. fi(classic) to samo
+    // include "fi(fi)", a fi(fi) dolacza kpdl(comma), ktory robi z kropki
+    // przecinek. / Keypad decimal point instead of comma: fi(classic) is just
+    // include "fi(fi)", and fi(fi) pulls in kpdl(comma).
     include "kpdl(dot)"
 
     name[Group1] = "Finnish (Polish AltGr)";
