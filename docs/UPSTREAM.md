@@ -42,6 +42,22 @@ Upstream **nie przyjmie samodzielnego układu `fipl`**. Wymagania:
    wariant z precedensem to `fi(intl)` („multi-language support").
 7. **Licencja**: MIT (Expat) — zgodna z tym, na czym stoi `xkeyboard-config`.
 
+## Przed wysłaniem MR
+
+* [ ] **Poprawić autora commita `ad2b87c`** na gałęzi `fi-polish-variant`
+  w `~/Dokumenty/xkeyboard-config-upstream`. Obecnie jest tam zaślepka
+  `Piotr <MAINTAINER_EMAIL@example.invalid>`, która powstała, gdy `dpkg`
+  odmawiał parsowania `<MAINTAINER_EMAIL>` i trzeba było wstawić cokolwiek
+  składniowo poprawnego. Upstream odrzuca nieprawidłowe adresy autorów,
+  a adres zostaje w historii projektu na stałe.
+  Docelowy adres **do ustalenia** — najpewniej adres `noreply`
+  z konta na gitlab.freedesktop.org. Poprawka:
+  `git commit --amend --author="Imię <adres>"` na tej gałęzi.
+* [ ] Powtórzyć sprawdzenie rejestru na gałęzi `master` upstreamu
+  (patrz sekcja pierwsza) i przejrzeć otwarte zgłoszenia oraz MR-y.
+* [ ] Uzupełnić `<REPO_URL>` i `<LICZBA — źródło: Tilastokeskus>`
+  w `~/Dokumenty/xkeyboard-config-MR-draft.md`.
+
 ## Proces
 
 Merge request na <https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config>,
