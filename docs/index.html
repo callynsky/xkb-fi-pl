@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkb-fi-pl — polskie znaki na fińskiej klawiaturze w Linuksie</title>
+<meta name="description" content="Układ XKB fipl: polskie znaki (ą ę ł ż…) na fińskiej klawiaturze w Linuksie — Ubuntu, Linux Mint, KDE, GNOME. Type Polish letters on a Finnish keyboard.">
+<link rel="canonical" href="https://callynsky.github.io/xkb-fi-pl/">
+<meta name="color-scheme" content="light dark">
+
+<!-- Weryfikacja Google Search Console: wklej tutaj tag z panelu, usuwajac
+     znaczniki komentarza. Nic innego na tej stronie nie wymaga zmiany.
+<meta name="google-site-verification" content="…">
+-->
+
+<!-- Favicon wpisany w strone, zeby nie bylo zadnego zapytania na zewnatrz
+     ani bledu 404 o /favicon.ico. -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%231f6feb'/><text x='8' y='12' font-size='11' font-family='sans-serif' text-anchor='middle' fill='white'>ł</text></svg>">
+
+<style>
+:root {
+  --tlo: #ffffff; --tekst: #1c1f24; --cichy: #5a6372;
+  --kreska: #d6dae1; --kod-tlo: #f3f5f8; --link: #0a58ca; --akcent: #1f6feb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tlo: #15181d; --tekst: #e6e8ec; --cichy: #9aa3b2;
+    --kreska: #2c313a; --kod-tlo: #1e222a; --link: #7ab0ff; --akcent: #4b8dff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--tlo); color: var(--tekst);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.strona { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .4rem; }
+h2 { font-size: 1.35rem; margin: 2.6rem 0 .6rem; padding-top: 1.4rem; border-top: 1px solid var(--kreska); }
+h3 { font-size: 1.05rem; margin: 1.6rem 0 .4rem; }
+p, ul { margin: .7rem 0; }
+ul { padding-left: 1.3rem; }
+a { color: var(--link); }
+code, kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em; background: var(--kod-tlo); padding: .1em .35em; border-radius: 4px;
+}
+pre {
+  background: var(--kod-tlo); padding: .85rem 1rem; border-radius: 7px;
+  overflow-x: auto; border: 1px solid var(--kreska);
+}
+pre code { background: none; padding: 0; font-size: .88em; }
+img.uklad {
+  width: 100%; height: auto; margin: 1.2rem 0; border-radius: 7px;
+  border: 1px solid var(--kreska); background: #fff;
+}
+table { border-collapse: collapse; margin: 1rem 0; }
+th, td { border: 1px solid var(--kreska); padding: .35rem .8rem; text-align: left; }
+th { background: var(--kod-tlo); font-weight: 600; }
+td:nth-child(2), td:nth-child(3) { font-size: 1.15em; }
+.wstep { font-size: 1.1rem; color: var(--cichy); margin-top: 0; }
+.jezyki { margin: 1.2rem 0 0; font-size: .95rem; color: var(--cichy); }
+.jezyki a { margin-right: .9rem; }
+footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--kreska); color: var(--cichy); font-size: .9rem; }
+.odnosniki { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; padding: 0; list-style: none; }
+</style>
+</head>
+<body>
+<main class="strona">
+
+<h1>xkb-fi-pl</h1>
+<p class="wstep">Polskie znaki na fińskiej klawiaturze w Linuksie.</p>
+
+<nav class="jezyki" aria-label="Języki">
+  <a href="#polski" lang="pl">Polski</a>
+  <a href="#english" lang="en">English</a>
+  <a href="#suomeksi" lang="fi">Suomeksi</a>
+</nav>
+
+<img class="uklad" src="uklad-fipl.png"
+     alt="Układ klawiatury fipl: fiński układ z polskimi znakami ą ć ę ł ń ó ś ź ż na trzecim poziomie pod klawiszem AltGr">
+
+<section id="polski" lang="pl">
+<h2>Polski</h2>
+
+<p>Ten układ pozwala pisać polskie znaki (ą ę ł ż…) na fińskiej klawiaturze
+w Linuksie — to zwykły układ XKB, więc działa jednakowo w Ubuntu, Linux Mint,
+KDE i GNOME.</p>
+
+<p><strong>Standardowy fiński układ klawiatury, w którym AltGr daje polskie
+znaki dokładnie tak samo jak na polskiej klawiaturze (<code>pl</code>).</strong>
+Fińska podstawa zostaje nietknięta: <code>å</code>, <code>ö</code>,
+<code>ä</code>, martwe znaki, wszystko na swoim miejscu. Dochodzi wyłącznie
+dziewięć polskich liter na trzecim poziomie.</p>
+
+<p>Nazwa układu: <code>fipl</code>, wariant <code>fi_pl</code>.</p>
+
+<table>
+<thead><tr><th>klawisz</th><th>AltGr</th><th>AltGr+Shift</th></tr></thead>
+<tbody>
+<tr><td><code>a</code></td><td>ą</td><td>Ą</td></tr>
+<tr><td><code>c</code></td><td>ć</td><td>Ć</td></tr>
+<tr><td><code>e</code></td><td>ę</td><td>Ę</td></tr>
+<tr><td><code>l</code></td><td>ł</td><td>Ł</td></tr>
+<tr><td><code>n</code></td><td>ń</td><td>Ń</td></tr>
+<tr><td><code>o</code></td><td>ó</td><td>Ó</td></tr>
+<tr><td><code>s</code></td><td>ś</td><td>Ś</td></tr>
+<tr><td><code>x</code></td><td>ź</td><td>Ź</td></tr>
+<tr><td><code>z</code></td><td>ż</td><td>Ż</td></tr>
+</tbody>
+</table>
+
+<h3>Instalacja</h3>
+
+<p>Pakiet <code>.deb</code> (Debian, Ubuntu) — zalecane:</p>
+<pre><code>wget https://github.com/callynsky/xkb-fi-pl/releases/download/v1.1.0/xkb-fi-pl_1.1.0_all.deb
+sudo apt install ./xkb-fi-pl_1.1.0_all.deb</code></pre>
+
+<p>Pakiet <strong>tylko udostępnia</strong> układ. Niczego nie wybiera i nie
+zmienia żadnego Twojego ustawienia — nie ma skryptów <code>postinst</code>
+ani <code>postrm</code>.</p>
+
+<p>Bez pakietu, z repozytorium:</p>
+<pre><code>./install.sh --check      # sprawdza kompilację, nic nie instaluje
+./install.sh --user       # ~/.config/xkb
+./install.sh --system     # /etc/xkb (działa też na ekranie logowania)
+./install.sh --uninstall</code></pre>
+
+<h3>Wybór układu</h3>
+<pre><code># sesja graficzna: Ustawienia systemowe → Klawiatura → Układy → Dodaj → „fipl”
+sudo localectl set-x11-keymap fipl pc105 fi_pl   # konsola i ekran logowania</code></pre>
+
+<h3>Czym różni się od standardowego fińskiego</h3>
+<ul>
+<li><strong><code>AltGr+l</code> zajmuje miejsce <code>dead_stroke</code></strong>
+z <code>fi(classic)</code>. To jedyny znak fińskiego układu, który trzeba było
+poświęcić, żeby <code>ł</code> trafiło tam, gdzie jest na polskiej klawiaturze.</li>
+<li><strong>Kropka na klawiaturze numerycznej zostaje kropką.</strong>
+<code>fi(classic)</code> to samo <code>include "fi(fi)"</code>, a
+<code>fi(fi)</code> dołącza <code>kpdl(comma)</code>, który zamienia ją na
+przecinek. Ten układ przywraca kropkę przez <code>include "kpdl(dot)"</code>.</li>
+</ul>
+</section>
+
+<section id="english" lang="en">
+<h2>English</h2>
+
+<p>This layout lets you type Polish letters on a Finnish keyboard in Linux — it
+is a plain XKB layout, so it behaves the same on Ubuntu, Linux Mint, KDE and
+GNOME.</p>
+
+<p><strong>A standard Finnish keyboard layout where AltGr produces the Polish
+letters in the same positions as on the Polish (<code>pl</code>) layout.</strong>
+The Finnish base is untouched — <code>å</code>, <code>ö</code>, <code>ä</code>
+and the dead keys all stay where they are. Nine letters are added on the third
+level: <strong>ą ć ę ł ń ó ś ź ż</strong>, capitals on AltGr+Shift. Layout name
+<code>fipl</code>, variant <code>fi_pl</code>.</p>
+
+<pre><code>wget https://github.com/callynsky/xkb-fi-pl/releases/download/v1.1.0/xkb-fi-pl_1.1.0_all.deb
+sudo apt install ./xkb-fi-pl_1.1.0_all.deb</code></pre>
+
+<p>Or from a clone: <code>./install.sh --user</code> (into
+<code>~/.config/xkb</code>) or <code>--system</code> (into <code>/etc/xkb</code>,
+which also covers the login screen). The package only makes the layout
+available; it never selects it and never edits your settings.</p>
+
+<ul>
+<li><strong><code>AltGr+l</code> replaces <code>dead_stroke</code></strong> from
+<code>fi(classic)</code> — the one Finnish character given up so that
+<code>ł</code> sits where Polish typists expect it.</li>
+<li><strong>The keypad decimal key stays a dot.</strong> <code>fi(classic)</code>
+is just <code>include "fi(fi)"</code>, and <code>fi(fi)</code> pulls in
+<code>kpdl(comma)</code>, which turns the dot into a comma; this layout restores
+it with <code>include "kpdl(dot)"</code>.</li>
+</ul>
+
+<p><a href="layout-fipl-en.png">Layout picture with English labels</a></p>
+</section>
+
+<section id="suomeksi" lang="fi">
+<h2>Suomeksi</h2>
+
+<p>Tämän asettelun avulla kirjoitat puolalaiset kirjaimet suomalaisella
+näppäimistöllä Linuxissa — se on tavallinen XKB-asettelu, joten se toimii
+samoin Ubuntussa, Linux Mintissä, KDE:ssä ja GNOMEssa.</p>
+
+<p><strong>Tavallinen suomalainen näppäinasettelu, jossa AltGr tuottaa
+puolalaiset kirjaimet samoista näppäimistä kuin puolalaisessa
+(<code>pl</code>) asettelussa.</strong> Suomalainen perusta on ennallaan —
+<code>å</code>, <code>ö</code>, <code>ä</code> ja tarkenäppäimet pysyvät
+paikoillaan. Mukaan tulee yhdeksän näppäintä: <strong>ą ć ę ł ń ó ś ź ż</strong>,
+isot kirjaimet AltGr+Shift. Asettelun nimi <code>fipl</code>, muunnos
+<code>fi_pl</code>.</p>
+
+<pre><code>wget https://github.com/callynsky/xkb-fi-pl/releases/download/v1.1.0/xkb-fi-pl_1.1.0_all.deb
+sudo apt install ./xkb-fi-pl_1.1.0_all.deb</code></pre>
+
+<p>Tai kloonista: <code>./install.sh --user</code> tai <code>--system</code>.
+Paketti ainoastaan tuo asettelun saataville; se ei valitse sitä eikä muuta
+asetuksiasi.</p>
+
+<ul>
+<li><strong><code>AltGr+l</code> korvaa <code>fi(classic)</code>-asettelun
+<code>dead_stroke</code>-merkin.</strong></li>
+<li><strong>Numeronäppäimistön desimaalierotin pysyy pisteenä.</strong>
+<code>fi(classic)</code> on pelkkä <code>include "fi(fi)"</code>, ja
+<code>fi(fi)</code> tuo mukanaan <code>kpdl(comma)</code>-määrittelyn, joka
+tekee pisteestä pilkun; tämä asettelu palauttaa pisteen
+<code>include "kpdl(dot)"</code> -rivillä.</li>
+</ul>
+
+<p><a href="nappaimisto-fipl-fi.png">Näppäimistökuva suomeksi</a></p>
+</section>
+
+<section id="linki" lang="pl">
+<h2>Repozytorium i dokumentacja</h2>
+<ul class="odnosniki">
+<li><a href="https://github.com/callynsky/xkb-fi-pl">Repozytorium na GitHubie</a></li>
+<li><a href="https://github.com/callynsky/xkb-fi-pl/releases/tag/v1.1.0">Wydanie 1.1.0</a></li>
+<li><a href="https://github.com/callynsky/xkb-fi-pl/issues/1">Windows / macOS — issue #1</a></li>
+<li><a href="https://github.com/callynsky/xkb-fi-pl/blob/main/docs/CONSOLE.md">Konsola tekstowa</a></li>
+<li><a href="https://github.com/callynsky/xkb-fi-pl/blob/main/docs/UPSTREAM.md">Zgłoszenie do upstreamu</a></li>
+</ul>
+
+<p>Windows i macOS: układ jest zrobiony dla XKB, czyli Linuksa. Odpowiednik dla
+Windowsa (MSKLC) jeszcze nie istnieje — jeśli chcesz pomóc, zajrzyj do
+<a href="https://github.com/callynsky/xkb-fi-pl/issues/1">issue #1</a>.</p>
+</section>
+
+<footer>
+<p>Licencja MIT (Expat). Dołączana baza <code>fi(classic)</code> pozostaje
+własnością autorów <a href="https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config">xkeyboard-config</a>.</p>
+<p>Ta strona nie używa skryptów, zewnętrznych fontów ani mechanizmów śledzenia.</p>
+</footer>
+
+</main>
+</body>
+</html>

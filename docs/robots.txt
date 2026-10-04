@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://callynsky.github.io/xkb-fi-pl/sitemap.xml
